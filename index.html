@@ -231,7 +231,7 @@
 
 				for (let i = 0; i < contextNames.length; i++) {
 					const contextName = contextNames[i];
-					const isSupported = () => !!document.createElement('canvas').getContext('webgl')
+					const isSupported = () => !!document.createElement('canvas').getContext(contextName)
 					isSupported ? console.log(`${contextName} supported`) : console.log(`${contextName} unsupported`)
 				}
 			}
